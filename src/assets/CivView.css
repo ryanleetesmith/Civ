@@ -1,0 +1,261 @@
+/*
+ * Styling for the application window and elements.
+ */
+
+.root {
+  -fx-font-family: "Arial";
+  -fx-font-size: 18;
+  -fx-line-spacing: 6px;
+}
+
+.ui,
+.map {
+  -fx-background: #000;
+  -fx-background-color: #000;
+}
+.map > .viewport {
+  -fx-background-color: transparent;
+}
+
+.button {
+  -fx-padding: 12 24;
+  -fx-font-size: 13;
+  -fx-font-weight: bold;
+  -fx-text-alignment: center;
+  -fx-text-fill: #fff;
+  -fx-background-color: #000;
+  -fx-border-width: 1;
+  -fx-border-color: rgba(255,255,255,0.9);
+  -fx-border-radius: 3;
+}
+.button:hover {
+  -fx-border-color: #fff;
+  -fx-background-color: #222;
+}
+
+.city-pane-scroll-wrapper {
+  -fx-border-width: 0;
+  -fx-background-color: transparent;
+  -fx-background: transparent;
+}
+
+.detail-pane {
+  -fx-pref-width: 200;
+  -fx-padding: 24 24 30;
+  -fx-border-width: 2;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(255,255,255,0.2);
+  -fx-background-color: rgba(0,0,0,0.7);
+  -fx-background-insets: 2;
+}
+.detail-pane--city {
+  -fx-border-width: 0;
+}
+.detail-pane__name {
+  -fx-fill: #fff;
+  -fx-font-size: 26;
+  -fx-font-weight: bold;
+  -fx-padding: 20;
+}
+.detail-pane__figure-group {
+  -fx-padding: 6 0;
+}
+.detail-pane__figure {
+  -fx-fill: #fff;
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+}
+.detail-pane__divider {
+  -fx-fill: rgba(255,255,255,0.5);
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+}
+.detail-pane__label {
+  -fx-font-size: 13;
+  -fx-fill: rgba(255,255,255,0.7);
+}
+.detail-pane__help {
+  -fx-padding: 6 0 0;
+}
+.detail-pane__help * {
+  -fx-font-size: 13;
+  -fx-fill: rgba(255,255,255,0.9);
+}
+.detail-pane__space-above {
+  -fx-padding: 24 0 0;
+}
+.detail-pane__pop-count {
+  -fx-spacing: 6;
+  -fx-padding: 24 0 6;
+}
+.detail-pane__build-row {
+  -fx-padding: 12 0 6;
+  -fx-hgap: 18;
+}
+.detail-pane__button {
+  -fx-pref-width: 110;
+  -fx-padding: 10 0;
+}
+.detail-pane {
+  -fx-pref-width: 200;
+  -fx-padding: 24 24 30;
+  -fx-border-width: 2;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(255,255,255,0.2);
+  -fx-background-color: rgba(0,0,0,0.7);
+  -fx-background-insets: 2;
+}
+.detail-pane--city {
+  -fx-pref-width: 240;
+}
+.detail-pane__name {
+  -fx-fill: #fff;
+  -fx-font-size: 26;
+  -fx-font-weight: bold;
+  -fx-padding: 20;
+}
+.detail-pane__figure-group {
+  -fx-padding: 6 0;
+}
+.detail-pane__figure {
+  -fx-fill: #fff;
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+}
+.detail-pane__divider {
+  -fx-fill: rgba(255,255,255,0.5);
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+}
+.detail-pane__label {
+  -fx-font-size: 13;
+  -fx-fill: rgba(255,255,255,0.7);
+}
+.detail-pane__help {
+  -fx-padding: 6 0 0;
+}
+.detail-pane__help * {
+  -fx-font-size: 13;
+  -fx-fill: rgba(255,255,255,0.9);
+}
+.detail-pane__space-above {
+  -fx-padding: 24 0 0;
+}
+.detail-pane__pop-count {
+  -fx-hgap: 6;
+  -fx-padding: 24 0 6;
+}
+.detail-pane__build-row {
+  -fx-padding: 12 0 6;
+}
+.detail-pane__cost-icons {
+  -fx-spacing: 6;
+}
+.detail-pane__button {
+  -fx-pref-width: 110;
+  -fx-padding: 10 0;
+  -fx-font-size: 13;
+  -fx-font-weight: bold;
+  -fx-text-alignment: center;
+  -fx-text-fill: #fff;
+  -fx-background-color: #000;
+  -fx-border-width: 1;
+  -fx-border-color: rgba(255,255,255,0.9);
+  -fx-border-radius: 3;
+}
+.detail-pane__button:hover {
+  -fx-border-color: #fff;
+  -fx-background-color: #222;
+}
+.detail-pane__button--disabled {
+  -fx-border-color: #555;
+}
+.detail-pane__build-costs {
+  -fx-padding: 4 0 0;
+}
+
+.population-icon {
+  -fx-fill: #47bee3;
+}
+.population-icon--unavailable {
+  -fx-fill: #f46464;
+}
+
+.hp-bar {
+  -fx-max-width: Infinity;
+  -fx-border-width: 1;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(0,0,0,0.25);
+  -fx-background-color: #dd3d3d;
+  -fx-background-insets: 1;
+}
+.hp-bar__remainder {
+  -fx-pref-height: 4;
+  -fx-background-color: #17e313;
+}
+
+.end-turn-button {
+  /* fill grid space */
+  -fx-max-width: Infinity;
+}
+
+.players {
+  -fx-hgap: 18;
+  -fx-vgap: 6;
+}
+.player {
+  -fx-spacing: 4;
+  -fx-padding: 12 24 12 18;
+  -fx-border-width: 2 2 2 4;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(255,255,255,0.2);
+  -fx-background-color: rgba(0,0,0,0.7);
+  -fx-background-insets: 2 2 2 4;
+}
+.player.player-1 {
+  -fx-border-color: rgba(255,255,255,0.2)
+                    rgba(255,255,255,0.2)
+                    rgba(255,255,255,0.2)
+                    #0cacf0;
+}
+.player.player-2,
+.player.cpu-player{
+  -fx-border-color: rgba(255,255,255,0.2)
+                    rgba(255,255,255,0.2)
+                    rgba(255,255,255,0.2)
+                    #d28e0a;
+}
+.player.player-3 {
+  -fx-border-color: rgba(255,255,255,0.2)
+                    rgba(255,255,255,0.2)
+                    rgba(255,255,255,0.2)
+                    #bb15d7;
+}
+.player.player-4 {
+  -fx-border-color: rgba(255,255,255,0.2)
+                    rgba(255,255,255,0.2)
+                    rgba(255,255,255,0.2)
+                    #55be24;
+}
+.player__name {
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+  -fx-fill: #fff;
+}
+.player__stats {
+  -fx-font-size: 13;
+  -fx-fill: rgba(255,255,255,0.9);
+}
+
+.positive {
+  -fx-fill: #17e313;
+  -fx-font-weight: bold;
+}
+.neutral {
+  -fx-fill: #e3B820;
+  -fx-font-weight: bold;
+}
+.negative {
+  -fx-fill: #f46464;
+  -fx-font-weight: bold;
+}
