@@ -1,5 +1,6 @@
 # compiled code
 out/
+bin/
 
 # game data
 save_game.dat
