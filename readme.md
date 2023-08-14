@@ -1,10 +1,23 @@
-Welcome to: Sid Meier's Civilization .5
+Welcome to Sid Meier's Civilization 0.5!
 
-Summary:              This civ-esque game takes elements from later civilization games and 
-		      integrates them into a game similar to civilization 1, but less complicated.
-		      Your objective is to destroy all enemy cities! Found cities using a settler, and wait for them 
-		      to accrue production reserves. Once you have enough production, create a  unit, and send 
-		      it towards your enemies.
+This is a version of Civilization 1 with 2.5d isometric board graphics and simplified game mechanics. The objective? Simply destroy all enemy cities! Can be played by 1 - 4 people (locally), and supports multiple maps and map sizes as well as game saves!
+
+When running Civ.java you will be greeted with a simple menu screen where you can select to start a new game, or load an existing one from the file that is automatically written to when a game is closed prematurely.
+
+
+Once clicking "New game", you can select which map you would like to play on. After selecting the map you can select the number of players as well as how large you want the selected map to be.
+![New game](https://github.com/ryanleetesmith/Civ/assets/142176160/b5e72a7d-82eb-43eb-acdf-250fd459f762|width=20px)
+
+
+You start with only one unit, the settler! Select the unit to see its stats on the left, as well as highlighted tiles it can still move to. There are a variety of terrain types that cost different amounts to move to and impact the performance of each unit in battle as well (ocean and mountain tiles are impassable).
+
+![selected settler](https://github.com/ryanleetesmith/Civ/assets/142176160/a1b7c30f-926a-4a45-9de1-60489fde3377)
+
+
+
+
+
+
 
 
 ### FEATURES ###
