@@ -7,7 +7,7 @@ import models.Player;
 /**
  * Basic setup for a scout unit which has higher movement and sight.
  *
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Luke Hankins
  *
  */
 public class Scout extends Unit {

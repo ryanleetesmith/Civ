@@ -11,6 +11,12 @@ import components.Tile;
 import controllers.CivController;
 import models.CivModel;
 
+/**
+ * Tests the methods of CivBoard.
+ *
+ * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ */
+
 public class CivBoardTest {
 	@Test
 	public void testBoard() {

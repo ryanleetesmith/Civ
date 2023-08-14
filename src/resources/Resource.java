@@ -8,7 +8,7 @@ import components.City;
  * Resource superclass - unlocks new units when a city owns a tile containing
  * one of these.
  * 
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Luke Hankins
  *
  */
 public class Resource {

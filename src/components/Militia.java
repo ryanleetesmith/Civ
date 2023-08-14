@@ -7,7 +7,7 @@ import models.Player;
 /**
  * Class containing unit stats for the militia unit.
  * 
- * @author Ryan Smith
+ * @author Luke Hankins
  *
  */
 public class Militia extends Unit {

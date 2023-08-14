@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import components.City;
 import components.Unit;
 /**
+ * Player.java
+ * 
  * Player class exists to keep an aggregation of data associated with each player
  * 	so the controller knows what Units/Tiles each player is allowed to interact with.
  * 
@@ -15,7 +17,7 @@ import components.Unit;
  *  @field ID is a String that gives this Player's "name" for displaying in the view and specifying
  *  		in the controller. 
  *  
- * @author Luke
+ * @author Ryan Smith, Connie Sun
  *
  */
 public class Player implements Serializable {

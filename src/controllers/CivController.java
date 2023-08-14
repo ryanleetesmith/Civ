@@ -13,12 +13,13 @@ import models.CivModel;
 import models.Player;
 
 /**
- * Provides methods to calculate data about game state or act as a computer
- * player that updates game state. This class contains all of the logic
- * necessary to play the game, such as creating units, moving units, and
- * determining when the game is over.
+ * CivController.java
+ * 
+ * Provides methods to calculate data about game state and update it accordingly.
+ * This class contains all of the logic necessary to play the game, such as creating 
+ * units, moving units, AI action, determining when the game is over, etc.
  *
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Ryan Smith, Tim Gavlick, Connie Sun
  */
 public class CivController {
 
@@ -46,6 +47,7 @@ public class CivController {
 	 */
 	public void placeStartingUnits() {
 		ArrayList<int[]> startingCoords = model.getPlayerStartingCoords();
+		// structured as for loop for functionality elsewhere, loop runs twice.
 		for (int i = 0; i < startingCoords.size(); i++) {
 			curPlayer = model.getCurPlayer();
 			int[] coord = startingCoords.get(i);
@@ -91,6 +93,7 @@ public class CivController {
 			c.cityIncrement();
 			updateCity(c);
 		}
+		// perform turn change
 		if (!curPlayer.isHuman())
 			computerTurn();
 		model.changeAndNotify();
@@ -140,6 +143,7 @@ public class CivController {
 	 * when all actions are completed.
 	 */
 	public void computerTurn() {
+		// housekeeping
 		for (City c : curPlayer.getCities()) {
 			computerCityActions(c);
 		}
@@ -148,10 +152,11 @@ public class CivController {
 		while (i < curPlayer.getUnits().size()) {
 			int oldSize = curPlayer.getUnits().size();
 			Unit u = curPlayer.getUnits().get(i);
+			// if a settler is controlled, found city asap
 			if (u instanceof Settler) {
 				computerSettlerActions((Settler) u);
 			}
-			// these ones are defending the city
+			// defend city
 			else if (firstFew > 0) {
 				computerDefenderActions(u);
 				firstFew--;
@@ -272,6 +277,7 @@ public class CivController {
 		// search the entire map for the user's closest city
 		Integer[] closest = new Integer[] { -1, -1 };
 		int minDist = Integer.MAX_VALUE;
+		// brute force approach, maps cannot be large enough for this to impact runtime
 		for (int i = 0; i < model.getSize(); i++) {
 			for (int j = 0; j < model.getSize(); j++) {
 				Tile t = getTileAt(i, j);
@@ -288,7 +294,7 @@ public class CivController {
 				}
 			}
 		}
-		if (closest[0] == -1) // no cities left to attack
+		if (closest[0] == -1) // no cities left to attack, edge case
 			return;
 		moveTowards(u, closest);
 	}
@@ -442,9 +448,11 @@ public class CivController {
 	private boolean attack(Tile attackerTile, Tile defenderTile) {
 		Unit attacker = attackerTile.getUnit();
 		Unit defender = defenderTile.getUnit();
+		// apply modifiers
 		double attack = attacker.getAttackValue();
 		attack *= attackerTile.getAttackModifier();
 		defender.takeAttack(attack);
+		// attacker strikes first
 		if ((int) defender.getHP() <= 0) {
 			defenderTile.setUnit(null);
 			defender.getOwner().removeUnit(defender);
@@ -452,6 +460,7 @@ public class CivController {
 		}
 		double counterattack = defender.getAttackValue();
 		counterattack *= defenderTile.getAttackModifier();
+		// attacker gets hit back if defender didnt perish
 		attacker.takeAttack(counterattack);
 		if ((int) attacker.getHP() <= 0) {
 			attacker.move(attacker.getMovement(), attacker.getX(), attacker.getY());
@@ -573,6 +582,7 @@ public class CivController {
 				else
 					t = getTileAt(dirs[j], y);
 				if (t != null && t.getOwnerCity() == null) {
+					// tile has been retrieved and is available, set owner
 					t.setOwnerCity(c);
 					t.checkForNewResource();
 				}

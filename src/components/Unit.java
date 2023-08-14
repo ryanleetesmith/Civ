@@ -9,9 +9,14 @@ import models.Player;
 
 /**
  *
- * Unit superclass containing costs and fields to be filled by subclasses.
+ * Unit superclass that must be extended by all unit subclasses. Contains a map of unit costs,
+ * coordinates on the board, a reference to the player who owns the unit, stats such as HP, movement,
+ * attack, sight, etc. Most methods are getters to be used elsewhere, but also contains a select 
+ * few methods to modify unit values, such as taking damage, reducing remaining movement, and changing
+ * coordinate.
+ * 
  *
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Ryan Smith & Luke Hankins
  *
  */
 public class Unit implements Serializable {

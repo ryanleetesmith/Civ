@@ -7,9 +7,12 @@ import java.util.List;
 import models.Player;
 
 /**
- * Class representing a single tile within our board.
+ * Class representing a single tile within our board. Contains fields representing
+ * the tile type, modifiers, occupying unit, and who it is revealed to.
+ * 
+ * Contains methods to reveal and occupy tile, and change the game state accordingly.
  *
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Ryan Smith, Luke Hankins, Tim Gavlick
  *
  */
 public class Tile implements Serializable {

@@ -7,7 +7,7 @@ import models.Player;
 /**
  * Subclass containing stats for the swordsman unit.
  * 
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Luke Hankins
  *
  */
 public class Swordsman extends Unit {

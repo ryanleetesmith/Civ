@@ -5,7 +5,7 @@ import components.City;
 /**
  * Wheat resource subclass to unlock the militia unit.
  *
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Luke Hankins
  */
 public class Wheat extends Resource {
 

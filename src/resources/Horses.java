@@ -5,7 +5,7 @@ import components.City;
 /**
  * Horses resource which unlocks cavalry
  * 
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Luke Hankins
  *
  */
 public class Horses extends Resource {

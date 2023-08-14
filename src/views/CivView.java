@@ -67,9 +67,13 @@ import models.CivModel;
 import models.Player;
 
 /**
- * A GUI, eventually.
+ * 
+ * CivView.java
+ * 
+ * Game GUI! Is constantly interacted with by the user via event handlers, and controller
+ * via game state changes.
  *
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Tim Gavlick, Connie Sun, Ryan Smith
  */
 @SuppressWarnings("deprecation")
 public class CivView extends Application implements Observer {

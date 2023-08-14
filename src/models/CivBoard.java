@@ -13,7 +13,11 @@ import java.util.Scanner;
 import components.Tile;
 
 /**
- * Holds the collection of individual tiles that make up a single Civ map.
+ * CivBoard.java
+ * 
+ * Holds the collection of individual tiles that make up a single Civ map. Is serialized to support
+ * saving and loading games. Constructs boards based on map seleciton, or in the case of map 4, 
+ * randomizes it while avoiding softlocks.
  *
  * @field tiles 2D array containing our tile objects
  * @field size int specifying the size of our board --> board is size x size
@@ -23,7 +27,8 @@ import components.Tile;
  * 		2 players for a 2 player game, the third gives the starting coordinate of player three
  * 		(if there is one) and similarly for player 4. --> Will spawn players across the map from
  * 		each other rather than close to each other given the opportunity
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * 
+ * @author Connie Sun, Ryan Smith, Tim Gavlick
  */
 public class CivBoard implements Serializable {
 

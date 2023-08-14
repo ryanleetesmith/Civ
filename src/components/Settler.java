@@ -7,7 +7,7 @@ import models.Player;
 /**
  * Basic setup for a settler unit, which can only move and found cities.
  *
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Luke Hankins
  *
  */
 public class Settler extends Unit {

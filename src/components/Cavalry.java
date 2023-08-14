@@ -7,7 +7,7 @@ import models.Player;
 /**
  * Cavalry unit stats.
  * 
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Luke Hankins
  *
  */
 public class Cavalry extends Unit {

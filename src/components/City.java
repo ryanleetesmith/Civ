@@ -8,10 +8,11 @@ import java.util.Set;
 import models.Player;
 
 /**
- * Class which represents a City object and all of its internal components such
- * as producion, population, etc.
+ * Class which represents a City object including all of its internal components such
+ * as producion, population, growth, owned tiles, etc. Contains methods to unlock/produce units,
+ * grow in size, and various getters
  *
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Luke Hankins, Ryan Smith, Connie Sun
  *
  */
 public class City implements Serializable{
@@ -42,6 +43,7 @@ public class City implements Serializable{
 		this.cityHPMax = 100;
 		this.cityHPCur = this.cityHPMax;
 		this.producableUnits = new HashSet<String>();
+		// initially makeable units
 		producableUnits.add("Warrior");
 		producableUnits.add("Scout");
 		producableUnits.add("Settler");
@@ -102,7 +104,7 @@ public class City implements Serializable{
 			this.cityHPMax += (10);
 			this.cityHPCur += (10);
 		}
-		// repairs
+		// repairs city passively
 		if (this.cityHPCur < this.cityHPMax) {
 			this.cityHPCur += (cityHPMax / 20);
 			if (this.cityHPCur > this.cityHPMax) {
@@ -148,7 +150,7 @@ public class City implements Serializable{
 	}
 
 	/**
-	 * retrieve the city's turn by turn production value
+	 * retrieve the city's remaining production points
 	 *
 	 * @return double representing current accumulated production.
 	 */

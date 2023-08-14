@@ -2,7 +2,7 @@ import javafx.application.Application;
 import views.CivView;
 
 /**
- * A launcher for our RPG.
+ * Main launcher for Civ rpg.
  *
  * <p>
  * This class acts as an entry point to launch the game UI. The current

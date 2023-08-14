@@ -12,9 +12,11 @@ import java.util.Observable;
 import components.Tile;
 
 /**
- * Holds game state data and provides utility methods to query or update it.
+ * CivModel.java
+ * 
+ * Holds game state data and provides utility methods to query or update it, including saving.
  *
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Connie Sun, Ryan Smith, Tim Gavlick
  */
 @SuppressWarnings("deprecation")
 public class CivModel extends Observable implements Serializable {
@@ -334,7 +336,7 @@ public class CivModel extends Observable implements Serializable {
 	/**
 	 * Node class for keeping a wrapped list of players
 	 *
-	 * @author Luke
+	 * @author Ryan Smith
 	 * @field player Player object associated with this node
 	 * @field next Next node that contains the player whose turn it is next
 	 */

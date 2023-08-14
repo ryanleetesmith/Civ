@@ -5,7 +5,7 @@ import components.City;
 /**
  * Iron resource which unlocks swordsmen
  * 
- * @author Connie Sun, Ryan Smith, Luke Hankins, Tim Gavlick
+ * @author Luke Hankins
  *
  */
 public class Iron extends Resource {
