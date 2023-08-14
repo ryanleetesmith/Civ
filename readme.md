@@ -3,6 +3,8 @@
 This is a version of Civilization 1 with 2.5d isometric board graphics and simplified game mechanics. The objective? Simply destroy all enemy cities! Can be played by 1 - 4 people (locally), and supports multiple maps and map sizes as well as game saves!
 
 **Environment**: This game runs using both Java and JavaFX 15.
+**Contributors**: Made by Ryan Smith, Timothy Gavlick, Connie Sun, and Luke Hankins.
+
 
 
 
