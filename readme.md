@@ -75,12 +75,3 @@ There are lots of small features that have not been described in this readme, ha
 
 
 
-
-
-Specifics:
-
-
-				  
-Units:
-
-
